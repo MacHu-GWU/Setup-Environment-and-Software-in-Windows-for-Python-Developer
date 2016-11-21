@@ -22,7 +22,7 @@ Software you need:
 根据你的操作系统选择32位或64位的安装, 在Win7, Win8, Win10时代通常就用64位版本的吧。 因为只有极少数的扩展包不兼容64位版本。 可以同时安装多个不同大版本的Python。 比如Python34, Python33, Python27, Python26可以共存。 但是Python276, Python271就无法共存。 之后会介绍如何同时管理多个Python版本的方法。
 
 一路Next安装完成Python之后。 右键点击Computer, 选择Property(或进入Control Panel\System and Security\System)。 按照下图设置Windows环境变量, 在Path中添加你所安装的Python版本的路径。 这样你在命令行中输入python, 系统才能够找到对应的python解释器。
-![](images\01_python_system_environment_variable.png)
+![](images/python_system_environment_variable.png)
 
 **多Python版本兼容**
 
