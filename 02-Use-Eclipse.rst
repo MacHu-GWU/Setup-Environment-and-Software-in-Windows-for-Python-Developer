@@ -94,8 +94,8 @@ ReST Editor
 ~~~~~~~~~~~
 该插件提供了restructed text的语法高亮。
 
-- Updaate: http://resteditor.sourceforge.net/
-- Homepage: http://resteditor.sourceforge.net/eclipse
+- Update: http://resteditor.sourceforge.net/eclipse
+- Homepage: http://resteditor.sourceforge.net/
 - Settings: Preferences -> ReST Editor
 
 Notice: Install this before you change your default color theme
