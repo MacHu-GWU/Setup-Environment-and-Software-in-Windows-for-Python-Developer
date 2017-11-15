@@ -1,0 +1,44 @@
+常见问题：无法从源代码安装需要编译的包
+==============================================================================
+
+有些包只提供了源码安装一种模式, 而如果里面包含C代码时, 通常会出现如下错误:
+
+.. code-block:: console
+
+    # Windows
+    Unable to find vcvarsall.bat
+
+或
+
+.. code-block:: console
+
+    # MacOS or Linux
+    error: command 'gcc' failed with exit status 1
+
+这是因为Python无法在你的电脑里找到C/C++编译器。
+
+因为Python标准库中用于安装Python包的 ``distutils\msvc9compiler.py`` 模块中有一套默认的搜索C编译器的机制, 就算你安装了微软的VS套件中的编译器, 而这套机制在Windows系统下并不能成功找到你安装的编译器。
+
+
+Windows下的解决方法
+------------------------------------------------------------------------------
+
+1. 下载微软的Python专用C++编译器: http://www.microsoft.com/en-us/download/confirmation.aspx?id=44266
+2. 安装下载好的编译器。
+3. 打开 ``C:\PythonXX\Lib\distutils\msvc9compiler.py``。
+4. 搜索 ``def find_vcvarsall()`` 找到这个关键的方法。这个方法默认的方式是通过读取windows注册表来尝试寻找vcvarsall.
+5. 把函数的全部内容注释掉, 增加一行 ``return r"C:\Users\<your user name>\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0"``。(各个机器上微软C++编译器的安装目标路径可能不同, 请根据情况自行修改)
+
+这样所有包含C代码的包就可以被顺利安装了。
+
+
+Linux下的解决方法
+------------------------------------------------------------------------------
+
+使用操作系统自带的包管理工具, ubuntu下是apt-get, redhat下是yum, 安装gcc编译器。当你安装成功以后, 如果在命令行中输入 ``gcc`` 有反应, 说明安装成功了。
+
+
+MacOS下的解决方法
+------------------------------------------------------------------------------
+
+使用HomeBrew包管理工具安装gcc编译器。如果在命令行中输入 ``gcc`` 有反应, 说明安装成功了。

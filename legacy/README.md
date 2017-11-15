@@ -158,7 +158,7 @@ Eclipse需要用户告之用户希望用哪个Python解释器来解释项目中�
 
 ##Text Editor安装和配置
 
-Sublime3的安装和配置请参考我的另一篇文章。[链接](https://github.com/MacHu-GWU/Learn-Sublime_My-favorite-text-editor/blob/master/Setup_SublimeText3_for_Python_Developer.md)
+Sublime3的安装和配置请参考我的另一篇文章。[链接](https://github.com/MacHu-GWU/Dev-Exp-Share/tree/master/Text%20Editor/Sublime%20Text)
 
 ##Version Control安装配置
 
