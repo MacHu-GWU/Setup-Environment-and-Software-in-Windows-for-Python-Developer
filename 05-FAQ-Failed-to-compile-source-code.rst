@@ -1,6 +1,8 @@
 FAQ: Failed to Compile Source Code
 ==============================================================================
 
+(`这篇文档当然有中文版 <https://github.com/MacHu-GWU/Setup-Environment-for-Python-Developer/blob/master/05-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%EF%BC%9A%E6%97%A0%E6%B3%95%E4%BB%8E%E6%BA%90%E4%BB%A3%E7%A0%81%E5%AE%89%E8%A3%85%E9%9C%80%E8%A6%81%E7%BC%96%E8%AF%91%E7%9A%84%E5%8C%85.rst>`_)
+
 Some package only provides source code archive, when it has C code, (for example: https://pypi.python.org/pypi/backports.lzma), your ``pip install`` could failed with:
 
 .. code-block:: console
